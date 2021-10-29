@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.get("http://fightcovid.live/wa-admin/api/auth/getBotResponse?wabiz_phone_number=%2B919850227209&guest_phone_number=9766678295&txt_msg=2&guest_user_name=&auth_token=45", 
+	function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+    }).fail(function(){
+	alert("FAILED");
+	});
+  });
+});
+</script>
+</head>
+<body>
+
+<button onclick="httpGet('CallMe')">Send an HTTP GET request to a page and get the result back</button>
+
+</body>
+</html>
